@@ -11,9 +11,10 @@ t=float(input("Enter the time of orbit in seconds: "))
 print("The satellite is at analtitude of",alt(t),"meters.")
 
 print("Part c")
-T=[24*60*60, 90*60, 45*60]
+T=[24*60*60, 90*60, 45*60] #Convert times to seconds#
 for t in T:
-    print("The altitude for an orbit of",t,"seconds is",alt(t),"meters")
+    print("The altitude for an orbit of",t/60,"minutes (",t/60/60,"hours) is",alt(t),"meters")
+print("The results indicate that the fastest orbit possible with the given conditions is between 45 and 90 minutes.")
         
 print("Part d")
 print("The altitude for an orbit of one sidereal day is",alt(23.93*60*60),"meters")
